@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body
+{
+    min-height: 100vh;
+    background:url('Resources/background-img.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-top: 60px;
+}
+
+.navbar {
+    background: rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgb(60, 60, 60);
+    padding: 10px 20px; /* Padding for spacing */
+    position: fixed; /* Fix navbar to the top */
+    width: 100%; /* Full width */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it's on top of other content */
+    text-align: center;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px; /* Limit the width of the navbar content */
+    margin: 0 auto; /* Center the container */
+}
+
+.navbar-menu {
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Horizontal layout */
+    justify-content: flex-start; /* Align links to the left */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin-right: 20px; /* Spacing between menu items */
+}
+
+.navbar-link {
+    color: rgba(0,0,0,1); /* White text color */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 18px; /* Set font size */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navbar-link:hover {
+    color: #3adeff; /* Change link color on hover (gold) */
+}
+
+
+.search-box
+{
+    position: relative;
+    width: 75%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    margin-left: 12.5%;
+}
+
+
+.search-box i
+{
+    position: absolute;
+    left: 10px;
+    font-size: 22px;
+    color: rgb(60, 60, 60);
+}
+
+.search-box input
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 1px solid rgb(60, 60, 60);
+    outline: none;
+    border-radius: 50px;
+    color: rgb(60, 60, 60);
+    font-size: 22px;
+    font-weight: 500;
+    padding: 0 48px 0 42px;
+    text-transform: capitalize;
+}
+
+.search-box input::placeholder
+{
+    color: rgb(60, 60, 60);
+}
+
+.search-box button
+{
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: rgb(60, 60, 60);
+    font-size: 22px;
+    padding: 0px 4px 0px 5px;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.table-container, .right-container {
+    background: rgba(255, 255, 255, 0.1); /* Background blur effect */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgb(60, 60, 60);
+    border-radius: 15px;
+    padding: 20px;
+    width: 50%;
+    margin: 20px;
+}
+
+/* Styling for the div that holds the table and buttons */
+#weatherTableDiv {
+    width: 100%; /* Takes up full width of the container */
+    max-width: 100%;
+    overflow-x: auto; /* Prevents overflow if table is too wide */
+    background: rgba(255, 255, 255, 0.9); /* Blur and color for the background */
+    backdrop-filter: blur(10px); /* Applies blur */
+    padding: 20px; /* Adds some padding for spacing */
+    border-radius: 10px; /* Optional: adds rounded corners */
+    margin-bottom: 20px; /* Adds spacing between the table and buttons */
+}
+
+h2 {
+    text-align: center;
+    color: #444;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #444;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+th {
+    background-color: #444;
+}
+
+td {
+    color: #444;
+    background-color: transparent;
+}
+
+
+/* Pagination buttons container */
+.pagination-buttons {
+    display: flex;
+    justify-content: center; /* Center align the buttons */
+    gap: 10px; /* Adds space between buttons */
+    padding: 10px 0; /* Padding for spacing around buttons */
+}
+
+/* Style for individual pagination buttons */
+.page-btn {
+    padding: 10px 20px; /* Adds padding for size */
+    background: rgba(0, 0, 0, 0.1); /* Light background, matching theme */
+    color: #fff; /* Text color */
+    border: none; /* Removes default border */
+    border-radius: 20px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s ease, transform 0.2s ease; /* Smooth background change on hover */
+}
+
+.pagination-btn:hover {
+    background: rgba(0, 0, 0, 0.2); /* Darker background on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.pagination-btn:disabled {
+    background: rgba(0, 0, 0, 0.05); /* Lighter background for disabled state */
+    
+}
+
+
+.right-container {
+    width: 40%; /* Adjust based on layout */
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.chatbot-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.prompt-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.prompt-bar input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.prompt-bar button {
+    background-color: #444;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.answer-area {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    width: 100%;
+    min-height: 150px;
+    overflow-y: auto;
+}

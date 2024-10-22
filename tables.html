@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="tables.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <ul class="navbar-menu">
+                <li><a href="index.html" class="navbar-link">Dashboard</a></li>
+                <li><a href="tables.html" class="navbar-link">Tables</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <div class="search-box">
+            <i class='bx bxs-map'></i>
+            <input id="searchInput" type="text" placeholder="Enter your Location">
+            <button id="searchButton" class="bx bx-search"></button>
+        </div>
+
+        <div class="content-container">
+            <!-- Left div with the table -->
+            <div class="table-container">
+                <h2>5-Day Weather Forecast</h2>
+                <table id="weatherTable">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Time</th>
+                            <th>Temperature</th>
+                            <th>Weather</th>
+                            <th>Humidity</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- More rows -->
+                    </tbody>
+                </table>
+                
+                <div id="pagination-buttons">
+                    <button id="prevPage" class="page-btn" disabled>Previous</button>
+                    <span id="pageNumber">Page 1</span>
+                    <button id="nextPage" class="page-btn">Next</button>
+                </div>
+            </div>
+
+            
+    
+            
+            <div class="right-container">
+                <div class="chatbot-container">
+                    <!-- Prompt bar -->
+                    <div class="prompt-bar">
+                        <input id="userQuery" type="text" placeholder="Ask me about the weather or table data...">
+                        <button id="askButton" class="bx bx-send"></button>
+                    </div>
+                    <!-- Answer area where the chatbot will respond -->
+                    <div id="chatbotAnswer" class="answer-area"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="tables.js"></script>
+</body>
+</html>
